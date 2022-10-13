@@ -1,3 +1,6 @@
+/* Main CSS Sheet */
+
+/* Automates Super Slick Company Logo at top of page */
 @keyframes logo {
     0%   {width: 25px; opacity: 0;}
     100% {width: 475px; opacity: 1;}
@@ -8,12 +11,14 @@
     animation-duration: 5s;        			
 	} 
 
+/* Sets font and background image/color of content */
 body {
     font-family: Poppins, Serif;
     background-image: url("concrete_seamless.png");
     background-color: #f1f1f1;
 }
 
+/* Sets vertical/horizontal spacing of items in header */
 header { 
     display: flex;
     flex-direction: column;
@@ -21,6 +26,7 @@ header {
     align-content: center;
 } 
 
+/* Set vertical/hozintal spacing of links in navigation */
 .nav_links {
     display: flex;
     flex-direction: column;
@@ -28,10 +34,12 @@ header {
     justify-content: center;
 }
 
+/* Enables links to always be one color */
 :visited {
     color: #0000FF;
 }
 
+/* Provides color, border, padding, and corers to card content */
 .card > header {
     background-color: #288088;
     border: 2px solid #45ADAD; 
@@ -43,6 +51,7 @@ header {
     border-top-right-radius: 50px;
 } 
 
+/* Creates spacing and additional borders for cards */
 .card {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -50,10 +59,12 @@ header {
     align-content: center;
 }
 
+/* Aligns text in card to central position */
 h4 {
     text-align: center;
 }
 
+/* Displays cards in an organized format */
 .pricing {
     display: flex;
     flex-wrap: wrap;
@@ -61,12 +72,14 @@ h4 {
     align-items: center;
 }
 
+/* Provides border, margin, width to bottom images */
 .gallery > img {
     border: solid 10px #50C7C7;
     margin: 10px;
     width: 300px;
 } 
 
+/* Provides horizontal and vetical spacing to images in gallery */
 .gallery {
     display: flex;
     flex-direction: row;
@@ -79,6 +92,7 @@ h4 {
 
 
 @media screen and (min-width: 900px) {
+    /* Sets vertical/horizontal spacing of items in header */
     header {
         display: flex;
         flex-direction: row;
@@ -86,6 +100,7 @@ h4 {
         justify-content: space-between;
     }
     
+    /* Set vertical/hozintal spacing of links in navigation */
     .nav_links {
         display: flex;
         flex-direction: row;
@@ -93,16 +108,19 @@ h4 {
         justify-content: right; 
     }
 
+    /* Displays cards in an organized format */
     .pricing {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
     }
 
+    /* Creates initial size for cards */
     .card {
         flex-basis: 275px;
     } 
 
+    /* Creates stickty heading, allowing it to remain on screen when user scrolls */
     body > header {
         position: sticky;
         top: 0;
@@ -110,10 +128,8 @@ h4 {
 
 }
 
-/*  Get header to be sticky, can google it */
-
 @media screen and (prefers-reduced-motion: reduce){
-  
+    /* Gets rid of logo animation in reduced motion view for accessibility  */
     #logo {
       animation-name: dissolve;
   }
@@ -122,23 +138,28 @@ h4 {
 
 
 @media print {
+    
+    /* Sets font and background image of content */
     body {
         font-family: Arial, Helvetica;
         background-image: none;
     }
 
+    /* Sets vertical/hozintal spacing of navigation element */
     nav {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
     
+    /* Sets vertical/horizontal spacing of navigation links */
     .nav_links {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }  
 
+    /* Displays cards in an organized format */
     .pricing {
         display: flex;
         flex-direction: row;
@@ -146,23 +167,28 @@ h4 {
         align-items: flex-end;
     }
 
+    /* Creates initial size and border for cards */
     .card {
         border: solid 2px #45ADDD;
         flex-basis: 325px;
     } 
 
+    /* Aligns text in card to left position */
     h4 {
         text-align: left;
     }
 
+    /* Gets rid of gallery images in print view */
     .gallery {
         display: none;
     }
 
+    /* Gets rid of gallery title in print view */
     #gallery {
         display: none;
     }
 
+    /* Adds "thumbs up" emoji to end of sentence in cards */
     .card ul li:nth-child(2)::after {
         content: '👍';
       }
